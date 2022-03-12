@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="icono.ico">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Meditation App</title>
+  </head>
+  <body>
+    <div id="respiration">
+      <button  type="button" id="btnResp"><img src="./svg/respiration.svg" alt=""><a href="#resp"></a></button>
+    </div>
+    <div id="frases">
+       <div id="frase" class="neon">
+        respira profundo 5 veces y libera la tencion antes de arrancar 
+       </div>  
+   </div>
+    <div class="app">
+      <div class="vid-container">
+        <video loop >
+          <source src="./video/rain.mp4"  type="video/mp4">
+          <source src="./video/fire.mp4"  type="video/mp4">
+        </video>    
+        </div>
+            <!-- seleccionamos el tiempo -->
+        <div class="time-select">
+          <button data-time="120">2 Minutos</button>
+          <button data-time="300" class="medium-mins">5 Minutos</button>
+          <button data-time="600" class="long-mins">10 Minutos</button>
+          <button data-time="900" class="longlong-mins">15 Minutos</button>
+        </div>
+            <!-- play, pause y progreso -->
+        <div class="player-container">
+            <audio class="song">
+                <source src="./sounds/rain.mp3" />
+              </audio>
+              <div id="image">
+                <img src="./svg/play.svg" class="play"></img>
+              </div>
+            
+             <!--  <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+                </svg> -->
+              <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+                </svg>
+              <img src="./svg/replay.svg" class="replay"></img>
+            
+                <h3 class="time-display">0:00</h3>   
+                <div id="volume">
+                  <input id="volume-control" type="range" min="0" max="100" value="50">
+                </div> 
+      </div>
+            <!-- botones de sonidos  y videos -->
+      <div class="sound-picker">
+        <button id="btnRain" data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4" ><img src="./svg/rain.svg" alt=""></button>
+        <button id="btnBeach" data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4"><img src="./svg/beach.svg" alt=""></button>
+        <button id="btnFire" data-sound="./sounds/fire.mp3"  data-video="./video/fire.mp4"><img src="./svg/fire.svg" alt=""></button>
+        <button id="btnForest" data-sound="./sounds/forest.mp3" data-video="./video/forest.mp4"><img src="./svg/tree.svg" alt=""></button>
+      </div>
+      </div>
+      
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
